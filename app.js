@@ -31,6 +31,7 @@ app.use('/api/news',newsRouter)
 app.use('/api/tongzhi',tongzhiRouter)
 app.use('/api/baoxiu',baoxiuRouter)
 app.use('/api/tousu',tousuRouter)
+app.use('/api/login',loginRouter)
 // app.use('/api/info', infoRouter);
 
 // catch 404 and forward to error handler
