@@ -33,6 +33,7 @@ app.use('/api/baoxiu',baoxiuRouter)
 app.use('/api/tousu',tousuRouter)
 app.use('/api/login',loginRouter)
 app.use('/api/guanlogin',guanliyuanRouter)
+app.use('/api/info',infoRouter)
 // app.use('/api/info', infoRouter);
 
 // catch 404 and forward to error handler
