@@ -9,6 +9,7 @@ var baoxiuSchema = new Schema({
   "baoxiuAdd":String,
   "beizhu":String,
   "panduan":String,
+  
 });
 
 /* var baoxiuModel = mongoose.model('baoxiu', baoxiuSchema);

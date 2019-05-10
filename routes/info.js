@@ -160,4 +160,25 @@ router.post('/del',function(req, res, next){
   })
 })
 
+//请求单个信息
+router.post('/xjh10', function(req, res, next) {
+  var chazhao={
+    userName:req.body.userName
+  }
+  infomodel.findOne({userName:chazhao.userName},function(err,doc){
+    if(err){
+      res.json({
+        status:"400",
+        msg:err.message
+      })
+    } else {
+      res.json({
+        status:'200',
+        msg:'suc',
+        result:doc
+      })
+    }
+  })
+});
+
 module.exports = router;

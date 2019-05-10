@@ -16,7 +16,9 @@ var infoSchema = new Schema({
   "idcardNum":Number,
   "job":String,
   "phoneNum":Number,
-  "panduan":String
+  "panduan":String,
+  "month":String,
+  "mianji":String,
 });
 
 /* var infoModel = mongoose.model('info', infoSchema);
@@ -35,7 +37,9 @@ infoModel.create({
   idcardNum:321281199711112365,
   job:"祈求者",
   phoneNum:15951657883,
-  panduan:"false"
+  panduan:"false",
+  month:"1",
+  mianji:"98"
 },function(err){
   if(!err){
     console.log("chenggong");

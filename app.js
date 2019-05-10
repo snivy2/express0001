@@ -13,6 +13,7 @@ var tousuRouter = require('./routes/tousu');
 var tongzhiRouter = require('./routes/tongzhi');
 var newsRouter = require('./routes/news');
 var guanliyuanRouter = require('./routes/guandenglu');
+var cheweiRouter = require('./routes/chewei');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/api/tousu',tousuRouter)
 app.use('/api/login',loginRouter)
 app.use('/api/guanlogin',guanliyuanRouter)
 app.use('/api/info',infoRouter)
+app.use('/api/chewei',cheweiRouter)
 // app.use('/api/info', infoRouter);
 
 // catch 404 and forward to error handler
