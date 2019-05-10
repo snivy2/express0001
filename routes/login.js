@@ -93,4 +93,36 @@ router.post('/xjh',function(req,res,next){
   });
 });
 
+//修改密码
+router.post('/update',function(req, res, next){
+  var userlogin2 = {
+    userName:req.body.userName,
+    userPwd:req.body.userPwd
+  };
+  loginmodel.findOneAndUpdate(
+    {userName:userlogin2.userName},{userPwd:userlogin2.userPwd}
+  ,function (err,data1) {
+    if(err){
+      return res.json({
+        status:"400",
+        msg:err.message
+      });
+    } else {
+      if(data1){
+        return res.json({
+          status:"201",
+          msg:"密码已修改",
+          result:data1
+
+        })
+      } else {
+        return res.json({
+          status:"404",
+          msg:'用户名不存在'
+        });
+      }
+    }
+  })
+})
+
 module.exports = router;

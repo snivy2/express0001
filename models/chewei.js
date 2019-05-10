@@ -1,4 +1,3 @@
-console.log("scs")
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 
@@ -11,8 +10,8 @@ var cheweiSchema = new Schema({
   "bianhao":Number,
   "yishou":String,
 });
-console.log("scs")
-var cheweiModel = mongoose.model('chewei', cheweiSchema);
+
+/* var cheweiModel = mongoose.model('chewei', cheweiSchema);
 cheweiModel.create({
   userName:"xujianhua1",
   zhuangtai:"false",
@@ -25,6 +24,6 @@ cheweiModel.create({
   if(!err){
     console.log("chenggong");
   }
-})
+}) */
 
 module.exports = mongoose.model('chewei',cheweiSchema);
