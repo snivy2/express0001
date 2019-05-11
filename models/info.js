@@ -21,7 +21,7 @@ var infoSchema = new Schema({
   "mianji":String,
   "cheweishu":Number
 });
-
+/* 
 var infoModel = mongoose.model('info', infoSchema);
 infoModel.create({
   userName:"xujianhua1",
@@ -46,7 +46,7 @@ infoModel.create({
   if(!err){
     console.log("chenggong");
   }
-})
+}) */
 /* var infoModel = mongoose.model('info', infoSchema);
 infoModel.create({
   userName:"xujianhua",

@@ -181,4 +181,38 @@ router.post('/xjh10', function(req, res, next) {
   })
 });
 
+
+
+// 修改缴费状态
+router.post('/jiaofei',function(req, res, next){
+  var userjiaofei = {
+    userName:req.body.userName,
+    zhuangtai:req.body.zhuangtai
+  };
+  infomodel.findOneAndUpdate(
+    {userName:userjiaofei.userName},{zhuangtai:userjiaofei.zhuangtai}
+  ,function (err,data1) {
+    if(err){
+      return res.json({
+        status:"400",
+        msg:err.message
+      });
+    } else {
+      if(data1){
+        return res.json({
+          status:"201",
+          msg:"已缴费",
+          result:data1
+
+        })
+      } else {
+        return res.json({
+          status:"404",
+          msg:'用户名不存在'
+        });
+      }
+    }
+  })
+})
+
 module.exports = router;

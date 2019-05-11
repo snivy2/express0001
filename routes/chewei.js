@@ -19,6 +19,23 @@ mongoose.connection.on("disconnected", function () {
 
 
 // 获得通知
+router.get('/xjh', function(req, res, next) {
+
+  cheweimodel.find(function(err,doc){
+    if(err){
+      res.json({
+        status:"400",
+        msg:err.message
+      })
+    } else {
+      res.json({
+        status:'200',
+        msg:'suc',
+        result:doc
+      })
+    }
+  })
+});
 /* router.get('/xjh', function(req, res, next) {
   tongzhimodel.find(function(err,doc){
     if(err){
