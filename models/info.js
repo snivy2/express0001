@@ -19,9 +19,10 @@ var infoSchema = new Schema({
   "panduan":String,
   "month":String,
   "mianji":String,
+  "cheweishu":Number
 });
 
-/* var infoModel = mongoose.model('info', infoSchema);
+var infoModel = mongoose.model('info', infoSchema);
 infoModel.create({
   userName:"xujianhua1",
   zhuangtai:"false",
@@ -39,12 +40,13 @@ infoModel.create({
   phoneNum:15951657883,
   panduan:"false",
   month:"1",
-  mianji:"98"
+  mianji:"98",
+  cheweishu:1
 },function(err){
   if(!err){
     console.log("chenggong");
   }
-}) */
+})
 /* var infoModel = mongoose.model('info', infoSchema);
 infoModel.create({
   userName:"xujianhua",
