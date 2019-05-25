@@ -32,6 +32,10 @@ router.post('/add',function(req, res, next){
     idcardNum:req.body.idcardNum,
     job:req.body.job,
     phoneNum:req.body.phoneNum,
+    zhuangtai:req.body.zhuangtai,
+    month:req.body.month,
+    mianji:req.body.mianji,
+    cheweishu:req.body.cheweishu
   }
   infomodel.findOne({userName:info.userName},function (err,data) {
     if(err){
